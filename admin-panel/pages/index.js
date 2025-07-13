@@ -42,7 +42,7 @@ export default function Home() {
       <div className="min-h-screen bg-gray-950 text-white font-inter px-4 py-6">
         <div className="max-w-2xl mx-auto bg-gray-900 rounded-xl shadow-lg p-6">
           <div className="flex items-center gap-4 mb-6">
-            <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi" alt="STRIM Logo" className="h-12 w-auto" />
+            <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi=w200" alt="STRIM Logo" className="h-12 w-auto" />
             <h1 className="text-2xl font-bold text-[#3fe0d0]">Admin Panel STRIM</h1>
           </div>
           <div className="mb-4">
