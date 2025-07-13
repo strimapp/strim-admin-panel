@@ -6,8 +6,8 @@ export default function Login() {
   const router = useRouter();
 
   const handleLogin = () => {
-    if (password === 'mysecretkey') {
-      localStorage.setItem('admin_token', 'mysecretkey');
+    if (password === '53m#G4beRkaH') {
+      localStorage.setItem('admin_token', '53m#G4beRkaH');
       router.push('/');
     } else {
       alert('Password salah!');
