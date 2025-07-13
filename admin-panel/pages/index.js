@@ -9,15 +9,17 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem('admin_token');
-    if (!token || token !== 'm0G4beRkaH') {
-      router.push('/login');
+    if (typeof window !== 'undefined') {
+      const token = localStorage.getItem('admin_token');
+      if (!token || token !== 'm0G4beRkaH') {
+        router.push('/login');
+      }
     }
-  }, []);
+  }, [router]);
 
   const handleReset = async () => {
     setLoading(true);
-    const token = localStorage.getItem('admin_token');
+    const token = typeof window !== 'undefined' ? localStorage.getItem('admin_token') : '';
     const res = await resetLicense(key, token);
     setResult(res);
     setLoading(false);
@@ -25,22 +27,24 @@ export default function Home() {
 
   const handleValidate = async () => {
     setLoading(true);
-    const token = localStorage.getItem('admin_token');
+    const token = typeof window !== 'undefined' ? localStorage.getItem('admin_token') : '';
     const res = await validateLicense(key, token);
     setResult(res);
     setLoading(false);
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('admin_token');
-    router.push('/login');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('admin_token');
+      router.push('/login');
+    }
   };
 
   return (
     <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center font-inter px-4">
       <div className="bg-gray-900 p-6 rounded-xl max-w-md w-full shadow-lg">
         <div className="flex justify-between items-center mb-6">
-        <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi=w200" alt="STRIM Logo" className="h-12 w-auto" />
+          <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi=w200" alt="STRIM Logo" className="h-12 w-auto" />
           <h2 className="text-2xl font-bold text-[#3fe0d0]">Dashboard Admin STRIM</h2>
           <button
             onClick={handleLogout}
