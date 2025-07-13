@@ -1,13 +1,14 @@
-# 🔐 Admin Panel Strim (Versi Aman)
+# 🌙 STRIM Admin Panel - Modern Dark UI
 
-## ✅ Fitur:
-- Login admin frontend (password: `mysecretkey`)
-- Validasi & reset lisensi
-- Token dikunci di backend via ENV (Vercel)
+## Fitur:
+- ✅ Tampilan dark modern dengan font Inter
+- ✅ Gunakan warna brand utama #3fe0d0
+- ✅ Ikon FontAwesome
+- ✅ Login admin & validasi lisensi
+- ✅ Logo STRIM dari Google Drive
 
-## 📦 Cara Deploy:
+## Deploy Gratis ke Vercel:
 1. Upload ke GitHub
-2. Deploy ke Vercel (import from repo)
-3. Tambahkan ENV variable:
+2. Deploy ke Vercel (import repo)
+3. Tambahkan ENV VAR:
    ADMIN_TOKEN = mysecretkey
-4. (Opsional) Arahkan admin.strim.my.id ke domain Vercel
