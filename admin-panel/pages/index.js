@@ -58,6 +58,12 @@ export default function Home() {
           <div className="flex items-center gap-4 mb-6">
             <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi=w200" alt="STRIM Logo" className="h-12 w-auto" />
             <h1 className="text-2xl font-bold text-[#3fe0d0]">Admin Panel STRIM</h1>
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-500"
+              >
+                Logout
+              </button>
           </div>
           <div className="mb-4">
             <label className="block mb-1 text-sm text-gray-300">License Key</label>
