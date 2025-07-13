@@ -1,0 +1,10 @@
+{
+  "headers": [
+    {
+      "source": "/login",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}
