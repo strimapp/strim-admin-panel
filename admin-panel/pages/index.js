@@ -1,6 +1,20 @@
 import { useEffect, useState } from 'react';
 import { validateLicense, resetLicense } from '../lib/api';
 import { useRouter } from 'next/router';
+const router = useRouter();
+
+useEffect(() => {
+  const token = localStorage.getItem('admin_token');
+  if (!token || token !== 'm0G4beRkaH') {
+    router.push('/login');
+  }
+}, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('admin_token');
+    router.push('/login');
+};
+
 import Head from 'next/head';
 
 export default function Home() {
