@@ -15,17 +15,19 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-6 rounded shadow max-w-sm w-full">
-        <h1 className="text-xl font-bold mb-4">🔐 Login Admin</h1>
+    <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center font-inter px-4">
+      <div className="bg-gray-900 p-6 rounded-xl max-w-sm w-full shadow-lg">
+        <h2 className="text-2xl font-bold text-center text-[#3fe0d0] mb-6">Login Admin STRIM</h2>
         <input
           type="password"
-          className="w-full border p-2 rounded mb-4"
+          className="w-full px-4 py-2 mb-4 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#3fe0d0]"
           placeholder="Masukkan Password Admin"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin} className="w-full bg-blue-600 text-white py-2 rounded">Login</button>
+        <button onClick={handleLogin} className="w-full bg-[#3fe0d0] text-black py-2 rounded font-semibold hover:bg-[#2ccabe]">
+          <i className="fas fa-lock mr-2"></i> Login
+        </button>
       </div>
     </div>
   );
