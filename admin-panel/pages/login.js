@@ -6,7 +6,6 @@ export default function Login() {
   const router = useRouter();
 
   const handleLogin = () => {
-    console.log("✅ STRIM LOGIN BUILD #v3 - Password check");
     if (password === 'm0G4beRkaH') {
       localStorage.setItem('admin_token', 'm0G4beRkaH');
       router.push('/');
@@ -26,8 +25,12 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin} className="w-full bg-[#3fe0d0] text-black py-2 rounded font-semibold hover:bg-[#2ccabe]">
-          <i className="fas fa-lock mr-2"></i> Login
+        <button
+          onClick={handleLogin}
+          className="w-full bg-[#3fe0d0] text-black py-2 rounded font-semibold hover:bg-[#2ccabe]"
+        >
+          <i className="fas fa-lock mr-2"></i>
+          Login
         </button>
       </div>
     </div>
