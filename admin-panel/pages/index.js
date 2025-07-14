@@ -44,7 +44,6 @@ export default function Home() {
     <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center font-inter px-4">
       <div className="bg-gray-900 p-6 rounded-xl max-w-md w-full shadow-lg">
         <div className="flex justify-between items-center mb-6">
-          <img src="https://lh3.googleusercontent.com/d/1y5fwgAzG5ujHbZ0AZCN_HQ4opRrJRkIi=w200" alt="STRIM Logo" className="h-12 w-auto" />
           <h2 className="text-2xl font-bold text-[#3fe0d0]">Dashboard Admin STRIM</h2>
           <button
             onClick={handleLogout}
